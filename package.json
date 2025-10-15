@@ -2,6 +2,7 @@
   "name": "@instellarmc/docs",
   "type": "module",
   "version": "0.0.1",
+  "license": "BSD-2-Clause",
   "scripts": {
     "preinstall": "npx only-allow bun",
     "postinstall": "lefthook install",
