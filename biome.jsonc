@@ -1,0 +1,259 @@
+{
+  "$schema": ".\\node_modules\\@biomejs\\biome\\configuration_schema.json",
+  "root": true,
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "experimentalScannerIgnores": [
+      ".astro",
+      "node_modules"
+    ]
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedProperties": "on"
+      }
+    }
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 100,
+    "lineEnding": "lf",
+    "useEditorconfig": true
+  },
+  "linter": {
+    "includes": [
+      "**",
+      "!.astro/**",
+      "!**/node_modules/**"
+    ],
+    "domains": {
+      "react": "all",
+      "project": "recommended"
+    },
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "complexity": {
+        "noArguments": "error",
+        "noCommaOperator": "error",
+        "noExcessiveCognitiveComplexity": {
+          "level": "warn",
+          "options": {
+            "maxAllowedComplexity": 16
+          }
+        },
+        "noExcessiveNestedTestSuites": "error",
+        "noForEach": "error",
+        "noUselessEscapeInRegex": "error",
+        "noUselessStringConcat": "info",
+        "noUselessStringRaw": "error",
+        "noUselessUndefinedInitialization": "error",
+        "useDateNow": "error",
+        "useSimplifiedLogicExpression": {
+          "level": "error",
+          "fix": "none"
+        },
+        "useNumericLiterals": "error",
+        "useWhile": "error"
+      },
+      "correctness": {
+        "noUndeclaredDependencies": "error",
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "warn",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "warn",
+        "noInvalidBuiltinInstantiation": "error",
+        "noMissingVarFunction": "error",
+        "noUnknownPseudoClass": "error",
+        "noUnknownPseudoElement": "error",
+        "noUnknownTypeSelector": "error",
+        "noSwitchDeclarations": "error"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "info",
+          "fix": "safe",
+          "options": {
+            "functions": [
+              "cn",
+              "clsx",
+              "cva"
+            ]
+          }
+        }
+      },
+      "performance": {
+        "noAccumulatingSpread": "warn",
+        "noBarrelFile": "error",
+        "noDelete": "error",
+        "noReExportAll": "warn",
+        "useTopLevelRegex": "error",
+        "noDynamicNamespaceImportAccess": "error",
+        "noImgElement": "warn",
+        "noNamespaceImport": "error"
+      },
+      "style": {
+        "noDefaultExport": "error",
+        "noDoneCallback": "error",
+        "noInferrableTypes": "warn",
+        "noNamespace": "error",
+        "noNegationElse": "warn",
+        "noNonNullAssertion": "error",
+        "noParameterAssign": "error",
+        "noRestrictedGlobals": {
+          "level": "error",
+          "options": {
+            "deniedGlobals": {
+              "alert": "alert is not allowed, please use a custom dialog component instead.",
+              "confirm": "confirm is not allowed, please use a custom dialog component instead.",
+              "prompt": "prompt is not allowed, please use a custom dialog component instead.",
+              "React": "React is not allowed.",
+              "ReactDOM": "ReactDOM is not allowed."
+            }
+          }
+        },
+        "noShoutyConstants": "warn",
+        "noUnusedTemplateLiteral": "error",
+        "noUselessElse": "error",
+        "noYodaExpression": "error",
+        "useAsConstAssertion": "info",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useConsistentArrayType": "warn",
+        "useConsistentBuiltinInstantiation": "error",
+        "useConst": "info",
+        "useDefaultParameterLast": "error",
+        "useDefaultSwitchClause": "warn",
+        "useExplicitLengthCheck": "error",
+        "useExponentiationOperator": "info",
+        "useExportType": "error",
+        "useFilenamingConvention": "error",
+        "useForOf": "error",
+        "useFragmentSyntax": "info",
+        "useImportType": "error",
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "strictCase": false
+          }
+        },
+        "useNodeAssertStrict": "error",
+        "useNodejsImportProtocol": "error",
+        "useNumberNamespace": "error",
+        "useSelfClosingElements": "info",
+        "useShorthandAssign": "error",
+        "useShorthandFunctionType": "error",
+        "useSingleVarDeclarator": "warn",
+        "useThrowNewError": "error",
+        "useThrowOnlyError": "error",
+        "useEnumInitializers": "error",
+        "useArrayLiterals": "error",
+        "noCommonJs": "error",
+        "noDescendingSpecificity": "warn",
+        "noEnum": "error",
+        "noNestedTernary": "warn",
+        "noSubstr": "error",
+        "noValueAtRule": "error",
+        "useAtIndex": "info",
+        "useCollapsedIf": "error",
+        "useConsistentCurlyBraces": "error",
+        "useConsistentMemberAccessibility": {
+          "level": "error",
+          "options": {
+            "accessibility": "explicit"
+          }
+        },
+        "useTrimStartEnd": "error"
+      },
+      "suspicious": {
+        "noEmptyBlockStatements": "error",
+        "noEvolvingTypes": "error",
+        "noMisplacedAssertion": "error",
+        "useAwait": "error",
+        "useErrorMessage": "error",
+        "useNumberToFixedDigitsArgument": "error",
+        "noDocumentCookie": "error",
+        "noDuplicateCustomProperties": "error",
+        "noDuplicateElseIf": "error",
+        "noDuplicateProperties": "error",
+        "noIrregularWhitespace": "error",
+        "noOctalEscape": "error",
+        "noTemplateCurlyInString": "error",
+        "useAdjacentOverloadSignatures": "error",
+        "useGuardForIn": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "info"
+      }
+    }
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space"
+    }
+  },
+  "css": {
+    "parser": {
+      "cssModules": true
+    },
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/.vscode/*.json"
+      ],
+      "json": {
+        "parser": {
+          "allowComments": true,
+          "allowTrailingCommas": true
+        }
+      }
+    },
+    {
+      "includes": [
+        "astro.config.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "**/*.svelte",
+        "**/*.astro"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUndeclaredVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
+}
