@@ -8,10 +8,7 @@
     "defaultBranch": "main"
   },
   "files": {
-    "experimentalScannerIgnores": [
-      ".astro",
-      "node_modules"
-    ]
+    "experimentalScannerIgnores": [".astro", "node_modules"]
   },
   "assist": {
     "actions": {
@@ -28,11 +25,7 @@
     "useEditorconfig": true
   },
   "linter": {
-    "includes": [
-      "**",
-      "!.astro/**",
-      "!**/node_modules/**"
-    ],
+    "includes": ["**", "!.astro/**", "!**/node_modules/**"],
     "domains": {
       "react": "all",
       "project": "recommended"
@@ -83,11 +76,7 @@
           "level": "info",
           "fix": "safe",
           "options": {
-            "functions": [
-              "cn",
-              "clsx",
-              "cva"
-            ]
+            "functions": ["cn", "clsx", "cva"]
           }
         }
       },
@@ -215,9 +204,7 @@
   },
   "overrides": [
     {
-      "includes": [
-        "**/.vscode/*.json"
-      ],
+      "includes": ["**/.vscode/*.json"],
       "json": {
         "parser": {
           "allowComments": true,
@@ -226,9 +213,7 @@
       }
     },
     {
-      "includes": [
-        "astro.config.ts"
-      ],
+      "includes": ["astro.config.ts"],
       "linter": {
         "rules": {
           "style": {
@@ -238,10 +223,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.svelte",
-        "**/*.astro"
-      ],
+      "includes": ["**/*.svelte", "**/*.astro"],
       "linter": {
         "rules": {
           "style": {
